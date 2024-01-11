@@ -1,27 +1,44 @@
-# DevathonInscriptionAngularApp
+# [Deathon incription](https://programacion-es.dev)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+<div style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <img src="./docs/assets/img/Logo-circle.webp" with="150px" height="150px" />
+    <h1>Programación en español</h1>
+</div>
 
-## Development server
+## Preview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+WIP
+![preview]
 
-## Code scaffolding
+## About
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Powered by Angular
 
-## Build
+<a href="https://angular.io/"><img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="Angular" width="300"/></a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This project is the frontend solution for the devathon's incription. It was developed with Angular 17.
 
-## Running unit tests
+## How to start?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the project, make sure Angular is installed in your environment, clone this repository and execute the following commands:
 
-## Running end-to-end tests
+- **npm i**
+- **npm start**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To build the static website run **npm run build**
 
-## Further help
+## Want to collaborate with the project?
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+If you wish to collaborate, you can **fork** the project in order to work in your environment. Once you're ready to go, you can launch a PR to **develop branch** of this repository
+
+## Join the community
+
+<div style="width:100%;display:flex;flex-direction:row;justify-content:center">
+    <a href="https://discord.gg/programacion-es"><img src="./docs/assets/img/discord-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.youtube.com/@programacion-es"><img src="./docs/assets/img/youtube-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.twitch.tv/programacion_en_esp"><img src="./docs/assets/img/twitch-logo-borderless.webp" with="50px" height="50px" /></a>
+    <a href="https://instagram.com/programacion.es/"><img src="./docs/assets/img/instagram-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://twitter.com/program_es"><img src="./docs/assets/img/twitter-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.tiktok.com/@programacion.es"><img src="./docs/assets/img/tiktok-icon.webp" with="50px" height="50px" /></a>
+    <a href="https://www.linkedin.com/in/pedroplasencia/"><img src="./docs/assets/img/linkedin-icon.webp" with="50px" height="50px" /></a>
+</div>
