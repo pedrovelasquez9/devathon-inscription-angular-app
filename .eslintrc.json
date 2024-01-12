@@ -1,0 +1,78 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "lines-around-comment": [
+          "error",
+          {
+            "beforeBlockComment": true,
+            "afterBlockComment": false,
+            "beforeLineComment": true,
+            "afterLineComment": false,
+            "allowBlockStart": true,
+            "allowBlockEnd": true,
+            "allowObjectStart": true,
+            "allowObjectEnd": true,
+            "allowArrayStart": true,
+            "allowArrayEnd": true,
+            "allowClassStart": true,
+            "allowClassEnd": true
+          }
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 80,
+            "ignoreUrls": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreComments": true,
+            "ignoreTrailingComments": true
+          }
+        ],
+        "arrow-body-style": ["error", "as-needed"]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
