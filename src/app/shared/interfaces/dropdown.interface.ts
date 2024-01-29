@@ -6,8 +6,5 @@ export interface DropDown {
 
 export enum StatusValues {
   active = 'active',
-  archived = 'archived',
-  disabled = 'disabled',
-  error = 'error',
-  ended = 'ended',
+  diactivated = 'diactivated',
 }

@@ -1,0 +1,27 @@
+<section class="card-layout">
+  <div>
+    <h2>Equipo Nº {{ teamData?.id }}</h2>
+  </div>
+  <div>
+    <p>
+      {{ teamData?.backendParticipants?.length }}/{{ teamData?.maxBackend }}
+      Backends
+    </p>
+    <p>
+      {{ teamData?.frontendParticipants?.length }}/{{ teamData?.maxFrontend }}
+      Frontends
+    </p>
+  </div>
+  <div>tech icons</div>
+  <button
+    mat-stroked-button
+    color="accent"
+    class="card-button"
+    [disabled]="
+      teamData?.backendParticipants?.length === teamData?.maxBackend &&
+      teamData?.frontendParticipants?.length === teamData?.maxFrontend
+    "
+    (click)="openModal(teamData?.id)">
+    Inscripción
+  </button>
+</section>

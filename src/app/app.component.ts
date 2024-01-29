@@ -1,13 +1,17 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { Unsubscriber } from './shared/unsubscriber/unsubscriber';
-import { SeniorityService } from './services';
-import { TeamComponent } from './components/team/list/team/team.component';
-import { SeniorityComponent } from './components/seniority/seniority.component';
-import { RolesComponent } from './components/roles/roles.component';
+import { TeamComponent } from './components/team/list/team.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ContentComponent } from './components/content/content.component';
 
-const COMPONENTS: any[] = [TeamComponent, SeniorityComponent, RolesComponent];
+const COMPONENTS: any[] = [
+  ContentComponent,
+  FooterComponent,
+  HeaderComponent,
+  TeamComponent,
+];
 
 const MODULES: any[] = [CommonModule];
 

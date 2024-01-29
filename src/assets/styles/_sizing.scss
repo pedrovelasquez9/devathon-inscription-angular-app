@@ -1,0 +1,112 @@
+.width {
+  &--auto {
+    width: auto;
+  }
+
+  &--size1of1 {
+    width: 100%;
+  }
+
+  &--size1of2 {
+    width: 50%;
+  }
+
+  &--size1of3 {
+    width: 33%;
+  }
+
+  &--size1of4 {
+    width: 25%;
+  }
+
+  &--size1of5 {
+    width: 20%;
+  }
+}
+
+.size {
+  &.size1 {
+    width: 10%;
+  }
+  &.size2 {
+    width: 20%;
+  }
+  &.size3 {
+    width: 30%;
+  }
+  &.size4 {
+    width: 40%;
+  }
+  &.size5 {
+    width: 50%;
+  }
+  &.size6 {
+    width: 60%;
+  }
+  &.size7 {
+    width: 70%;
+  }
+  &.size8 {
+    width: 80%;
+  }
+  &.size9 {
+    width: 90%;
+  }
+  &.size1of1 {
+    width: 100%;
+  }
+  &.size1of2 {
+    width: 50%;
+  }
+  &.size1of3 {
+    width: 33.33%;
+  }
+  &.size1of4 {
+    width: 25%;
+  }
+  &.size1of7 {
+    width: 66.67%;
+  }
+  &.xs-size1of1 {
+    width: 100%;
+  }
+  &.xs-size1of2 {
+    width: 50%;
+  }
+  &.xs-size1of3 {
+    width: 33%;
+  }
+  &.xs-size1of4 {
+    width: 25%;
+  }
+  &.xs-size1of5 {
+    width: 20%;
+  }
+  &.xs-size1 {
+    width: 10%;
+  }
+  &.xs-size2 {
+    width: 20%;
+  }
+  &.xs-size3 {
+    width: 30%;
+  }
+  &.xs-size4 {
+    width: 40%;
+  }
+  &.xs-size5 {
+    width: 50%;
+  }
+  &.xs-size6 {
+    width: 60%;
+  }
+  &.xs-size7 {
+    width: 70%;
+  }
+  &.xs-size8 {
+    width: 80%;
+  }
+  &.xs-size9 {
+    width: 90%;
+  }
+}

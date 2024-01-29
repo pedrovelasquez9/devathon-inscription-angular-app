@@ -1,0 +1,234 @@
+<h2 mat-dialog-title>Inscripcion para Devatlhon</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Team Nº {{ data.teamId }}</h3>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <mat-form-field style="width: 100%">
+        <mat-label>Full Name</mat-label>
+        <input
+          matInput
+          placeholder="Full Name"
+          name="fullname"
+          formControlName="fullname"
+          required />
+        <!-- @if (submitted && f['fullname'].hasError('required')) {
+          error
+        }
+        {{ submitted && f['fullname'].errors }} -->
+
+        <!-- {{ f['fullname'].errors | json }} -->
+        <!-- @if (form.controls['fullname'].errors)
+        {
+          //f.get('fullname').errors) {
+          //asdsad
+        } -->
+        <!-- f['fullname'].hasError('email') &&
+          !fullname.hasError('required')
+        ) {
+          <mat-error>Please enter a valid email address</mat-error>
+        }
+        @if (fullname.hasError('required')) {
+          <mat-error>Email is <strong>required</strong></mat-error>
+        }
+
+        @if (submitted && f['fullname'].errors) {
+          aaa
+          <div class="invalid-feedback">
+            @if (f['fullname'].errors['required']) {
+              <div>Fullname is required</div>
+            }
+          </div>
+        } -->
+        <!-- @if (submitted && f['fullname'].errors) {
+          <div class="invalid-feedback">
+            @if (f['fullname'].errors['required']) {
+              <div>Fullname is required</div>
+            } -->
+        <!-- @if (f['fullname'].errors['minlength']) {
+              <div>Username must be at least 6 characters</div>
+            }
+            @if (f['fullname'].errors['maxlength']) {
+              <div>Username must not exceed 2000 characters</div>
+            } -->
+        <!-- </div>
+        } -->
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field style="width: 100%">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          name="email"
+          formControlName="email"
+          required />
+        @if (submitted && f['email'].errors) {
+          <div class="invalid-feedback">
+            @if (f['email'].errors['required']) {
+              <div>Email is required</div>
+            }
+          </div>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field style="width: 100%">
+        <mat-label>Perfil de Github</mat-label>
+        <input
+          matInput
+          placeholder="gitHub URL"
+          name="gitHubUrl"
+          formControlName="gitHubUrl" />
+        @if (submitted && f['gitHubUrl'].errors) {
+          <div class="invalid-feedback">
+            @if (f['gitHubUrl'].errors['required']) {
+              <div>Email is required</div>
+            }
+          </div>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-label>Stack deseado</mat-label>
+      <mat-radio-group formControlName="stack">
+        <mat-radio-button color="primary" value="backend">
+          <span>Backend</span>
+        </mat-radio-button>
+        <mat-radio-button color="primary" value="frontend">
+          <span>Frontend</span>
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="form-group">
+      <mat-label>Disponibilidad</mat-label>
+      <mat-radio-group formControlName="availability">
+        <mat-radio-button color="primary" value="si">
+          <span>Si</span>
+        </mat-radio-button>
+        <mat-radio-button color="primary" value="no">
+          <span>No</span>
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="form-group">
+      <mat-form-field style="width: 100%">
+        <mat-label>Usuario de Discord</mat-label>
+        <input
+          matInput
+          placeholder="Usuario de Discord"
+          name="discordUser"
+          formControlName="discordUser"
+          required />
+        @if (submitted && f['discordUser'].errors) {
+          <div class="invalid-feedback">
+            @if (f['discordUser'].errors['required']) {
+              <div>User is required</div>
+            }
+          </div>
+        }
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field style="width: 100%">
+        <mat-label>Seniority</mat-label>
+        <mat-select formControlName="seniority">
+          <mat-option
+            *ngFor="let seniority of collectionOfSeniority"
+            [value]="seniority.value"
+            >{{ seniority.name }}</mat-option
+          >
+        </mat-select>
+        @if (submitted && f['seniority'].errors) {
+          <div class="invalid-feedback">
+            @if (f['seniority'].errors['required']) {
+              <div>Seniority is required</div>
+            }
+          </div>
+        }
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field style="width: 100%">
+        <mat-label>País</mat-label>
+        <input
+          #inputCountry
+          type="text"
+          placeholder="Seleccione un país"
+          matInput
+          formControlName="country"
+          [matAutocomplete]="auto"
+          (input)="filter()"
+          (focus)="filter()" />
+        <mat-autocomplete #auto="matAutocomplete">
+          @for (country of filteredOfCountry; track country.name) {
+            <mat-option [value]="country.name">
+              <img src="{{ country.flag }}" width="24px" height="auto" />{{
+                country.name
+              }}
+              asasa
+            </mat-option>
+          } @empty {
+            <li>There are no countries.</li>
+          }
+        </mat-autocomplete>
+        @if (submitted && f['country'].invalid) {
+          <mat-error>Country is required</mat-error>
+        }
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-label>¿Estás buscando trabajo?</mat-label>
+      <p>
+        <mat-radio-group formControlName="jobSearching">
+          <mat-radio-button color="primary" value="si">
+            <span>Si</span>
+          </mat-radio-button>
+          <mat-radio-button color="primary" value="no">
+            <span>No</span>
+          </mat-radio-button>
+        </mat-radio-group>
+      </p>
+    </div>
+    <div class="form-group">
+      <mat-label
+        >¿Preveés que hay posibilidad de que te retires a mitad del
+        evento?</mat-label
+      >
+      <section>
+        <mat-radio-group formControlName="quitEvent">
+          <mat-radio-button color="primary" value="si">
+            <span>Si</span>
+          </mat-radio-button>
+          <mat-radio-button color="primary" value="no">
+            <span>No</span>
+          </mat-radio-button>
+        </mat-radio-group>
+      </section>
+    </div>
+    <div class="form-group">
+      <section>
+        <mat-checkbox formControlName="acceptTerms"
+          >Acepto las condiciones y normas del Devathon</mat-checkbox
+        >
+      </section>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="size size1of1">
+  <a mat-button mat-dialog-close disableRipple="true" (click)="onClose()"
+    >Cancel</a
+  >
+  <button
+    mat-flat-button
+    (click)="onSubmit()"
+    [disabled]="f['acceptTerms'].value === false || submitted"
+    ngClass="{'is--loading': formSubmitted}"
+    color="primary"
+    class="size size1of2">
+    Confirmar inscripcion
+  </button>
+</mat-dialog-actions>

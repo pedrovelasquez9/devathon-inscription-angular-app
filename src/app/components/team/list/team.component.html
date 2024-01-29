@@ -1,0 +1,8 @@
+<section class="team-layout">
+  <div class="title">Devathon Inscription</div>
+  @for (team of items; track $index) {
+    <app-team-card [teamData]="team" />
+  } @empty {
+    Empty list of teams
+  }
+</section>
