@@ -107,9 +107,9 @@
 
 html,
 body {
+  background-color: var(--palette-general-0);
+  color: var(--palette-white-0);
+  font-family: var(--body-font-family);
+  font-size: var(--size---font-size-16);
   height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

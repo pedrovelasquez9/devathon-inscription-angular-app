@@ -1,10 +1,12 @@
 :host {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  font-size: 20px;
-  font-weight: 600;
-  height: 60px;
-  background-color: #ececec;
+  background-color: var(--palette-blue-es-60);
+  flex-direction: row;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-600);
+  justify-content: center;
+  margin: var(--spacing-10) var(--spacing-10);
+  min-height: 60px;
+  padding: var(--spacing-10);
 }
