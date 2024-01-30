@@ -10,6 +10,17 @@
   justify-content: space-evenly;
   margin: var(--spacing-10) var(--spacing-40);
   min-height: 80px;
+
+  .technologies {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    .tech-image {
+      height: 35px;
+      width: 35px;
+    }
+  }
   .card-button {
     background-color: var(--palette-grey-60);
     color: var(--palette-white-0);

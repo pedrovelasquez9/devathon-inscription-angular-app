@@ -35,9 +35,9 @@ export class TeamService {
           { id: 3, name: 'User 3' },
           { id: 4, name: 'User 4' },
         ],
-        tecnologies: [
-          { id: 1, name: 'Angular' },
-          { id: 2, name: 'c#' },
+        technologies: [
+          { id: 1, name: 'nextjs' },
+          { id: 2, name: 'express' },
         ],
       },
       {
@@ -53,9 +53,9 @@ export class TeamService {
           { id: 3, name: 'User 3' },
           { id: 4, name: 'User 4' },
         ],
-        tecnologies: [
-          { id: 1, name: 'Angular' },
-          { id: 2, name: 'c#' },
+        technologies: [
+          { id: 1, name: 'reactjs' },
+          { id: 2, name: 'java' },
         ],
       },
       {
@@ -71,9 +71,9 @@ export class TeamService {
           { id: 3, name: 'User 3' },
           { id: 4, name: 'User 4' },
         ],
-        tecnologies: [
-          { id: 1, name: 'Angular' },
-          { id: 2, name: 'c#' },
+        technologies: [
+          { id: 1, name: 'angular' },
+          { id: 2, name: 'csharp' },
         ],
       },
       {
@@ -83,6 +83,16 @@ export class TeamService {
         backendParticipants: [],
         maxBackend: 3,
         maxFrontend: 3,
+        technologies: [
+          { id: 1, name: 'angular' },
+          { id: 2, name: 'nestjs' },
+          { id: 1, name: 'express' },
+          { id: 2, name: 'csharp' },
+          { id: 1, name: 'java' },
+          { id: 2, name: 'reactjs' },
+          { id: 1, name: 'nextjs' },
+          { id: 2, name: 'nestjs' },
+        ],
       },
     ];
 

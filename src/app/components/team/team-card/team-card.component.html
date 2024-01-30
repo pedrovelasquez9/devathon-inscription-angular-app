@@ -12,7 +12,15 @@
       Frontends
     </p>
   </div>
-  <div>tech icons</div>
+  <div class="technologies">
+    @for (tech of teamData?.technologies; track $index) {
+      <img
+        src="../../../../assets/technologies/{{ tech.name }}.svg"
+        class="tech-image" />
+    } @empty {
+      Empty technologies
+    }
+  </div>
   <button
     mat-stroked-button
     color="accent"
