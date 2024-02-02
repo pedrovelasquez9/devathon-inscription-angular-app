@@ -1,5 +1,5 @@
 <section class="card-layout">
-  <div>
+  <div class="typo uppercase">
     <h2>Equipo Nº {{ teamData?.id }}</h2>
   </div>
   <div>
@@ -24,12 +24,12 @@
   <button
     mat-stroked-button
     color="accent"
-    class="card-button"
+    class="card-button typo uppercase"
     [disabled]="
       teamData?.backendParticipants?.length === teamData?.maxBackend &&
       teamData?.frontendParticipants?.length === teamData?.maxFrontend
     "
     (click)="openModal(teamData?.id)">
-    Inscripción
+    Registrarse
   </button>
 </section>

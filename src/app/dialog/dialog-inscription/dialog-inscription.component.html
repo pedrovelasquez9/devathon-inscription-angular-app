@@ -1,7 +1,7 @@
 <h2 mat-dialog-title>Inscripcion para Devatlhon</h2>
 <mat-dialog-content class="mat-typography">
   <h3>Team Nº {{ data.teamId }}</h3>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form">
     <div class="form-group">
       <mat-form-field style="width: 100%">
         <mat-label>Full Name</mat-label>
@@ -219,16 +219,20 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end" class="size size1of1">
-  <a mat-button mat-dialog-close disableRipple="true" (click)="onClose()"
+  <a
+    mat-button
+    mat-dialog-close
+    disableRipple="true"
+    class="typo uppercase"
+    (click)="onClose()"
     >Cancel</a
   >
   <button
     mat-flat-button
-    (click)="onSubmit()"
     [disabled]="f['acceptTerms'].value === false || submitted"
     ngClass="{'is--loading': formSubmitted}"
     color="primary"
-    class="size size1of2">
-    Confirmar inscripcion
+    class="typo uppercase size size1of2">
+    Confirmar
   </button>
 </mat-dialog-actions>

@@ -169,11 +169,6 @@ export class DialogInscriptionComponent implements OnInit {
     );
   }
 
-  onReset(): void {
-    this.submitted = false;
-    this.form.reset();
-  }
-
   onClose(): void {
     this._dialogRef.close();
   }
