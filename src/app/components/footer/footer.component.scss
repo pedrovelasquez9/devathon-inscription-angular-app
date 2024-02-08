@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  align-items: center;
+  background-color: var(--palette-blue-es-60);
+  flex-direction: row;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-600);
+  justify-content: center;
+  margin: var(--spacing-10) var(--spacing-10);
+  min-height: 60px;
+  padding: var(--spacing-10);
+
+  a {
+    color: var(--palette-blue-0);
+
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}

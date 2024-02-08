@@ -1,0 +1,35 @@
+<section class="card-layout">
+  <div class="typo uppercase">
+    <h2>Equipo Nº {{ teamData?.id }}</h2>
+  </div>
+  <div>
+    <p>
+      {{ teamData?.backendParticipants?.length }}/{{ teamData?.maxBackend }}
+      Backends
+    </p>
+    <p>
+      {{ teamData?.frontendParticipants?.length }}/{{ teamData?.maxFrontend }}
+      Frontends
+    </p>
+  </div>
+  <div class="technologies">
+    @for (tech of teamData?.technologies; track $index) {
+      <img
+        src="../../../../assets/technologies/{{ tech.name }}.svg"
+        class="tech-image" />
+    } @empty {
+      Empty technologies
+    }
+  </div>
+  <button
+    mat-stroked-button
+    color="accent"
+    class="card-button typo uppercase"
+    [disabled]="
+      teamData?.backendParticipants?.length === teamData?.maxBackend &&
+      teamData?.frontendParticipants?.length === teamData?.maxFrontend
+    "
+    (click)="openModal(teamData?.id)">
+    Registrarse
+  </button>
+</section>

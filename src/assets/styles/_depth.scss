@@ -1,0 +1,20 @@
+:root {
+  --shadow-none: none;
+  --shadow-sm: 0 2px 4px rgb(201 208 219 / 10%), 0 24px 60px rgb(21 36 90 / 5%),
+    0 12px 24px rgb(21 36 90 / 5%);
+  --shadow-xs: 1px 1px 4px #c9d0db;
+}
+
+.shadow {
+  &--none {
+    box-shadow: var(--shadow-none);
+  }
+
+  &--sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  &--xs {
+    box-shadow: var(--shadow-xs);
+  }
+}

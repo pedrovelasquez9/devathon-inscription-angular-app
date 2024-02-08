@@ -1,0 +1,13 @@
+<section class="main-container">
+  <div class="titleContainer">
+    <h1 class="main-title">
+      <span class="blue-letter">Programación</span> en español
+    </h1>
+  </div>
+
+  @for (team of items; track $index) {
+    <app-team-card [teamData]="team" class="team-card" />
+  } @empty {
+    Empty list of teams
+  }
+</section>

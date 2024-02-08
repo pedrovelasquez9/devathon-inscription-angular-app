@@ -1,0 +1,94 @@
+// how to use it?
+// "--palette-" + color + "-" + key
+// background-color: var(--palette-grey-100);
+
+$palettes: (
+  blue-es: (
+    0: #39b5ff,
+    10: #38b3ff,
+    20: #37b0ff,
+    30: #36aeff,
+    40: #35abff,
+    50: #34a8ff,
+    60: #33a6ff,
+    70: #32a3ff,
+    80: #31a1ff,
+    90: #309eff,
+    100: #004aac,
+  ),
+  blue: (
+    0: #004aad,
+    10: #38b6ff,
+  ),
+  general: (
+    0: #151c34,
+  ),
+  grey: (
+    0: #0d0f10,
+    10: #1a1d20,
+    20: #292e33,
+    30: #373e45,
+    40: #454f59,
+    50: #616a74,
+    60: #737f8b,
+    70: #8e99a7,
+    80: #9ca7b6,
+    90: #c9d0db,
+    95: #e6e9ef,
+    99: #f5f7fb,
+    100: #fdfdfe,
+  ),
+  white: (
+    0: #ffffff,
+  ),
+);
+
+// $header-background: var(--palette-grey-99);
+
+:root {
+  @each $colorname, $palette in $palettes {
+    @each $key, $value in $palette {
+      $keyname: '--palette-' + $colorname + '-' + $key;
+
+      #{$keyname}: #{$value};
+    }
+  }
+}
+
+.mood {
+  &-bg {
+    &--error {
+      background-color: var(--palette-red-100);
+    }
+
+    &--info {
+      background-color: var(--palette-dark-blue-100);
+    }
+
+    &--success {
+      background-color: var(--palette-green-100);
+    }
+
+    &--warning {
+      background-color: var(--palette-orange-100);
+    }
+  }
+
+  &-text {
+    &--error {
+      color: var(--palette-red-60);
+    }
+
+    &--info {
+      color: var(--palette-rebillia-blue-50);
+    }
+
+    &--success {
+      color: var(--palette-green-50);
+    }
+
+    &--warning {
+      color: var(--palette-orange-50);
+    }
+  }
+}

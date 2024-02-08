@@ -1,0 +1,47 @@
+.main-container {
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  .titleContainer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .main-title {
+      font-size: calc(1rem + 5vw);
+      .blue-letter {
+        text-align: center;
+        background: linear-gradient(
+          to right,
+
+          var(--palette-blue-0) 20%,
+          var(--palette-blue-10) 40%,
+          var(--palette-blue-10) 60%,
+          var(--palette-blue-0) 80%
+        );
+        background-size: 200% auto;
+        color: #000;
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        animation: shine 6s linear infinite;
+
+        @media (max-width: 600px) {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          margin: var(--spacing-10) var(--spacing-10);
+        }
+      }
+    }
+  }
+
+  .team-card {
+    width: 100%;
+  }
+}
