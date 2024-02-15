@@ -20,7 +20,6 @@ export class TeamComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subs.addSub = this.teamService.getTeamList().subscribe(
       (res: any) => {
-        console.log(res);
         this.items = res;
       },
       (err: any) => {

@@ -30,7 +30,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
-import { collectionOfSenirity } from 'app/shared/constant/senirity-contant';
+import { collectionOfSenirity } from 'app/shared/constant/seniority-contant';
 import { DropDown } from 'app/shared/interfaces/dropdown.interface';
 // eslint-disable-next-line max-len
 import { POST_InscriptionInterface } from 'app/shared/interfaces/post_Inscription.interface';
