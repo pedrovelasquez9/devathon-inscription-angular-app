@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class CountryService {
   private serviceUrl_Countries: string;
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) {
+  constructor() {
     // /globals/countries
     this.serviceUrl_Countries =
       'https://restcountries.com/v3.1/all?fields=name,flags';

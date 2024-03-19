@@ -28,8 +28,8 @@ export class TeamService {
         maxBackend: 2,
         maxFrontend: 2,
         frontendParticipants: [
-          { id: 1, name: 'User 1' },
-          { id: 2, name: 'User 2' },
+          { id: 1, name: 'User 1-front' },
+          { id: 2, name: 'User 2-front' },
         ],
         backendParticipants: [
           { id: 3, name: 'User 3' },
@@ -46,12 +46,12 @@ export class TeamService {
         maxBackend: 3,
         maxFrontend: 3,
         frontendParticipants: [
-          { id: 1, name: 'User 1' },
-          { id: 2, name: 'User 2' },
+          { id: 1, name: 'User 1-front' },
+          { id: 2, name: 'User 2-front' },
         ],
         backendParticipants: [
-          { id: 3, name: 'User 3' },
-          { id: 4, name: 'User 4' },
+          { id: 3, name: 'User 3-back' },
+          { id: 4, name: 'User 4-back' },
         ],
         technologies: [
           { id: 1, name: 'reactjs' },
@@ -64,12 +64,12 @@ export class TeamService {
         maxBackend: 3,
         maxFrontend: 3,
         frontendParticipants: [
-          { id: 1, name: 'User 1' },
-          { id: 2, name: 'User 2' },
+          { id: 1, name: 'User 1-front' },
+          { id: 2, name: 'User 2-front' },
         ],
         backendParticipants: [
-          { id: 3, name: 'User 3' },
-          { id: 4, name: 'User 4' },
+          { id: 3, name: 'User 3-back' },
+          { id: 4, name: 'User 4-back' },
         ],
         technologies: [
           { id: 1, name: 'angular' },
