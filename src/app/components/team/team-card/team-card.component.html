@@ -3,14 +3,47 @@
     <h2>Equipo Nº {{ teamData?.id }}</h2>
   </div>
   <div>
-    <p>
-      {{ teamData?.backendParticipants?.length }}/{{ teamData?.maxBackend }}
-      Backends
-    </p>
-    <p>
-      {{ teamData?.frontendParticipants?.length }}/{{ teamData?.maxFrontend }}
-      Frontends
-    </p>
+    <mat-expansion-panel hideToggle> </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+      [disabled]="
+        teamData?.backendParticipants?.length === 0 &&
+        teamData?.frontendParticipants?.length === 0
+      ">
+      <mat-expansion-panel-header>
+        <mat-panel-description>
+          <section class="participants-layout">
+            <div class="typo uppercase">
+              {{ teamData?.backendParticipants?.length }}/{{
+                teamData?.maxBackend
+              }}
+              Backends
+            </div>
+            <div class="typo uppercase">
+              {{ teamData?.frontendParticipants?.length }}/{{
+                teamData?.maxFrontend
+              }}
+              Frontends
+            </div>
+          </section>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <section class="participants-layout">
+        <div class="typo uppercase">
+          Backend
+          <li *ngFor="let hero of teamData?.backendParticipants">
+            {{ hero.name }}
+          </li>
+        </div>
+        <div class="typo uppercase">
+          Frontend
+          <li *ngFor="let hero of teamData?.frontendParticipants">
+            {{ hero.name }}
+          </li>
+        </div>
+      </section>
+    </mat-expansion-panel>
   </div>
   <div class="technologies">
     @for (tech of teamData?.technologies; track $index) {

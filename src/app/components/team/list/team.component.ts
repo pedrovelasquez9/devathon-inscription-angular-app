@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Unsubscriber } from 'app/shared/unsubscriber/unsubscriber';
 import { TeamService } from 'app/services';
 import { TeamCardComponent } from '..';
@@ -12,15 +12,15 @@ import { TeamCardComponent } from '..';
 })
 export class TeamComponent implements OnInit, OnDestroy {
   private subs = new Unsubscriber();
+  private teamService = inject(TeamService);
 
   items: any[] = [];
 
-  constructor(private teamService: TeamService) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.subs.addSub = this.teamService.getTeamList().subscribe(
       (res: any) => {
-        console.log(res);
         this.items = res;
       },
       (err: any) => {
